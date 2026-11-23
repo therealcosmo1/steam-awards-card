@@ -1,0 +1,8 @@
+{
+  "name": "steam-awards-nominees-card",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node dev/serve.mjs"
+  }
+}

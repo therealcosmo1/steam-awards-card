@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steam Awards Nominees Card</title>
+<meta name="description" content="Turn your Steam Awards nominations share link into an awards-show style image.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div class="kicker">The Steam Awards</div>
+    <h1>Nominees Card</h1>
+    <p class="lede">Paste the share link from your Steam Awards nominations page and get one image you can post anywhere.</p>
+  </header>
+
+  <form id="form" autocomplete="off">
+    <label for="url">Nominations share link</label>
+    <div class="row">
+      <input id="url" type="url" required spellcheck="false"
+             placeholder="https://store.steampowered.com/steamawards/nominations/2026/…?k=…">
+      <button id="go" type="submit">Make image</button>
+    </div>
+    <p class="hint">On Steam: open <b>The Steam Awards</b>, scroll below the categories, click <b>Generate new link</b>, then copy it.</p>
+  </form>
+
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <section id="result" hidden>
+    <img id="preview" alt="Your nominees card">
+    <div class="actions">
+      <button id="download" type="button">Download PNG</button>
+      <button id="copy" type="button" class="ghost">Copy image</button>
+      <button id="share" type="button" class="ghost" hidden>Share…</button>
+    </div>
+  </section>
+
+  <footer>Not affiliated with Valve. Game art © its respective owners.</footer>
+</main>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
